@@ -10,7 +10,6 @@ Prompts for an IFC file path, then converts all geometric entities to STEP
 Key IfcConvert flags used:
   --unify-shapes               merge touching/overlapping shapes
   --convert-back-units         output coordinates in mm (IFC native)
-  --disable-opening-subtractions  walls/slabs as closed solids without door/window cutouts
   --weld-vertices              merge near-duplicate vertices so OCC can close
                                IfcFacetedBrep shells into MANIFOLD_SOLID_BREP
   --reorient-shells            fix inconsistent face orientations so shells
@@ -164,7 +163,6 @@ def run_conversion(
             "--log-format", "plain",
             "--unify-shapes",
             "--convert-back-units",
-            "--disable-opening-subtractions",
             "--weld-vertices",
             "--reorient-shells",
         ]

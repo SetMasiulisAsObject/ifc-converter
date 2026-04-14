@@ -92,7 +92,7 @@ If the output file already exists you will be asked to confirm overwrite.
 | `IfcFacetedBrep` (walls, slabs, stairs, …) | `MANIFOLD_SOLID_BREP` (solid) |
 | `IfcMappedItem` (instanced geometry) | expanded and converted as above |
 
-Door and window openings are **not** subtracted from walls/slabs (`--disable-opening-subtractions`), so every element is a clean closed solid suitable for mass-property calculations.
+Door and window openings are subtracted from walls and slabs exactly as modelled in the IFC, preserving the true geometry of each element.
 
 ---
 
@@ -102,6 +102,5 @@ Door and window openings are **not** subtracted from walls/slabs (`--disable-ope
 |---|---|
 | `--unify-shapes` | Merge touching/overlapping shapes per element |
 | `--convert-back-units` | Output coordinates in millimetres (IFC native) |
-| `--disable-opening-subtractions` | Keep walls and slabs as closed solids |
 | `--weld-vertices` | Merge near-duplicate vertices so shells close correctly |
 | `--reorient-shells` | Fix inconsistent face normals before solid check |
