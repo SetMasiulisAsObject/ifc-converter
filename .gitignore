@@ -1,0 +1,24 @@
+# Sample / output files
+*.ifc
+*.stp
+*.step
+*.igs
+*.iges
+*.rpt
+*.err
+*.jpg
+*.png
+
+# PyInstaller build artefacts
+build/
+dist/
+*.spec
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Temp files
+tmp*.ifc
+tmp*.stp
